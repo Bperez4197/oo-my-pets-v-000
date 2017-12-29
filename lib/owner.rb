@@ -70,6 +70,12 @@ class Owner
     self.pets[:fishes].collect { |fish| fish.mood = "happy" }
   end
 
+  def sell_pets
+    self.pets.collect do |pet_type, pets|
+      pets.collect {|pet| pet.mood = "nervous"}
+    end
+    @pets.clear
+  end
 
 
 end
