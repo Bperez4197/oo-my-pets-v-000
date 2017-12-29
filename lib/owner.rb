@@ -2,7 +2,7 @@ class Owner
   # code goes here
   attr_accessor :name, :pets
   attr_reader :species
-  
+
   @@all = []
   @@owner_count = 0
 
@@ -17,8 +17,8 @@ class Owner
     @@all << self
     @name = ""
   end
-  
-  def all
+
+  def self.all
     @@all
   end
 
