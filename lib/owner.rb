@@ -22,4 +22,36 @@ class Owner
     @@all
   end
 
+  def self.reset_all
+    @@all.clear
+    @@owner_count = 0
+  end
+
+  def self.count
+    @@owner_count
+  end
+
+  def say_species
+    "I am a human."
+  end
+
+  def name
+    @name
+  end
+
+  def pets
+    @pets
+  end
+
+  def buy_fish(name)
+    fish = Fish.new(name)
+    self.pets[:fishes] << fish
+  end
+
+  def buy_cat(name)
+    cat = Cat.new(name)
+    self.pets[:cats] << cat
+  end
+  
+
 end
